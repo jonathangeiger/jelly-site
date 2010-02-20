@@ -22,3 +22,6 @@
 [submodule "modules/userguide"]
 	path = modules/userguide
 	url = git://github.com/kohana/userguide.git
+[submodule "modules/jelly"]
+	path = modules/jelly
+	url = git://github.com/jonathangeiger/kohana-jelly
