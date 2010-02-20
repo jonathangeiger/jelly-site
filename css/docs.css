@@ -6,7 +6,7 @@
 	background: url(/images/docs-header.png) no-repeat top left;
 }
 .jelly-api-link {
-	padding: 1em;
+	padding: 0 1em 1em;
 	font-size: 1.2em;
 	display: block;
 }
