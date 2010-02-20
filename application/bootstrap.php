@@ -49,7 +49,10 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  * - boolean  profile     enable or disable internal profiling               TRUE
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
-Kohana::init(array('base_url' => '/kohana/'));
+Kohana::init(array(
+	'base_url'		=> '/',
+	'index_file'	=> '',
+));
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
@@ -65,23 +68,41 @@ Kohana::$config->attach(new Kohana_Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'pagination' => MODPATH.'pagination', // Paging of results
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'jelly'		=> MODPATH.'jelly',		// The reason we are here!
+	'database'	=> MODPATH.'database',	// We don't use this but it is necessary for the API docs to generate
+	'userguide'	=> MODPATH.'userguide',	// User guide and API documentation
 	));
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('default', '(<controller>(/<action>(/<id>)))')
+
+// Jelly specific API Browser
+Route::set('jelly/docs/api', 'api(/<class>)', array('class' => '[a-zA-Z0-9_]+'))
 	->defaults(array(
-		'controller' => 'welcome',
-		'action'     => 'index',
+		'controller' => 'docs',
+		'action'     => 'api',
+		'class'      => NULL,
+	));
+
+// Translated user guide
+Route::set('jelly/docs/guide', 'docs(/<page>)', array(
+		'page' => '.+',
+	))
+	->defaults(array(
+		'controller' => 'docs',
+		'action'     => 'docs',
+	));
+
+// Our static pages
+Route::set('default', '(<page>)', array(
+		'page' => '.+'
+	))
+	->defaults(array(
+		'controller' => 'static',
+		'action'     => 'page',
+		'page'     	 => 'index',
 	));
 
 /**

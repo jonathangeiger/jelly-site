@@ -1,0 +1,129 @@
+body {
+	background-color: #fff;
+	color: #444;
+	font-family: Georgia, serif;
+	background: url(/images/fade.png) repeat-x 0 245px;
+}
+
+#container {
+	width: 900px;
+	margin: 50px auto;
+}
+
+#header {
+	height: 270px;
+	position: relative;
+}
+#header img {
+	position: absolute;
+	right: 130px;
+	top: 0;
+}
+#header h1 {
+	position: absolute;
+	font-size: 7em;
+	top: 55px;
+	margin: 0;
+	left: 130px;
+	text-indent: -9000px;
+	background: url(/images/jelly-heading.png);
+	height: 136px;
+	width: 277px;
+}
+#header h2 {
+	position: absolute;
+	text-align: center;
+	font-weight: normal;
+	color: #999;
+	bottom: 10px;
+	width: 100%;
+}
+
+#features {
+	width: 539px;
+	padding: 20px;
+	float: left;
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+#features p {
+	margin-top: 0;
+}
+#features ul {
+	margin: 0;
+	padding: 0;
+}
+#features ul li {
+	list-style-type: none;
+	background: url(/images/plus.png) no-repeat 10px 2px;
+	padding-left: 40px;
+}
+#features ul li p {
+	font-size: 0.9em;
+	color: #888;
+}
+
+#right-col {
+	width: 280px;
+	padding: 20px;
+	border-left: 1px solid #eee;
+	float: right;
+}
+
+#right-col h3 {
+	font-weight: normal;
+	margin: 8px 0 5px;
+	font-size: 1.3em;
+}
+#right-col span {
+	color: #999;
+}
+#right-col img {
+	float: left;
+	border: 0;
+	margin-right: 10px;
+}
+
+#download {
+	min-height: 62px;
+	border: 1px solid #ddd;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 12px;
+	-moz-box-shadow: 2px 2px 3px #ddd;
+	-webkit-box-shadow: 2px 2px 3px #ddd;
+	background: url(/images/download-bg.png) repeat-x top left #fffdd1;
+}
+#documentation {
+	padding: 13px;
+	margin: 10px 0;
+}
+
+#footer {
+	clear: both;
+	border-top: 1px solid #eee;
+	padding: 10px;
+	font-size: 0.8em;
+	color: #aaa;
+	text-align: center;
+}
+
+/* Links */
+
+a, a:link, a:visited, a:active {
+	color: #448ccb;
+	text-decoration: none;
+	border-bottom: 1px dashed #448ccb;
+}
+a:hover {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+/* Docs */
+
+code {
+	border: 1px solid #eee;
+	background-color: #fefefe;
+	padding: 2px 5px;
+}
