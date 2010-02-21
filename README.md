@@ -1,4 +1,4 @@
-The source code for the (simple) Jelly website.
+The source code for the (simple) Jelly website. Based on [Kohana 3](http://github.com/kohana/kohana)
 
 As with the Jelly module, this code is released here under an MIT license.
 
