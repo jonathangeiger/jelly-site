@@ -79,7 +79,7 @@ Kohana::modules(array(
  */
 
 // Jelly specific API Browser
-Route::set('jelly/docs/api', 'api(/<class>)', array('class' => '[a-zA-Z0-9_]+'))
+Route::set('jelly/docs/api', 'docs/api(/<class>)', array('class' => '[a-zA-Z0-9_]+'))
 	->defaults(array(
 		'controller' => 'docs',
 		'action'     => 'api',

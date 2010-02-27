@@ -43,7 +43,7 @@ class Controller_Docs extends Controller_Userguide
 		if ( ! $page)
 		{
 			// Redirect to the default page
-			$this->request->redirect($this->guide->uri(array('page' => 'jelly.conceptual-overview')));
+			$this->request->redirect($this->guide->uri(array('page' => 'jelly.getting-started')));
 		}
 
 		$file = $this->file($page);
