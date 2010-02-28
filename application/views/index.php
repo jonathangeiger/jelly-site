@@ -10,7 +10,7 @@
 	<h3>Notable Features</h3>
 	<ul>
 		<li>
-			<strong>Relatively small, clean, well-commented codebase</strong>
+			<strong>Small, clean, well-commented codebase</strong>
 			<p>Compared with other libraries with similar feature sets, Jelly is relatively light-weight yet powerfully extenisble.</p>
 		</li>
 		<li>
@@ -18,18 +18,18 @@
 			<p>All references to database columns and tables are made via their aliased names and converted transparently, on the fly.</p>
 		</li>
 		<li>
-			<strong>A built-in query builder</strong>
-			<p>This features is a near direct port from Kohana's native ORM.</p>
+			<strong>Natural, model-oriented extension of Kohana's Query Builder</strong>
+			<p>Handle models using a familiar, alias-aware API that is cleanly extensible per-model.</p>
 		</li>
 		<li>
 			<strong>Extensible field architecture</strong>
-			<p>All fields in a model are represented by a <code>Field_*</code> class, which can implement ready-made behaviors or be extended 
+			<p>All field data handling logic, including relationships is implemented in a <code>Field_*</code> class, which can be extended 
 			to provide huge flexibility without changes to the core library.</p>
 		</li>
 		<li>
-			<strong>No circular references</strong>
-			<p>Fields are well-designed to prevent the infinite loop problems. 
-			It's even possible to have same-table child/parent references out of the box.</p>
+			<strong>More to come</strong>
+			<p>While our primary concern is to get the most important features right and stable, we have designed
+			the API with our future plans in mind, including polymorphism and model behaviors.</p>
 		</li>
 	</ul>
 </div>
